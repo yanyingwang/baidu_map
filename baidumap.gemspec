@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'baidumap/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "baidumap"
+  spec.name          = "baidu_map"
   spec.version       = Baidumap::VERSION
   spec.authors       = ["YanyingWang"]
   spec.email         = ["wangyanying@gmail.com"]
 
   spec.summary       = %q{Baidu Map(百度地图) API in Ruby.}
-  spec.description   = %q{Ruby wapper for Baidu Map API using for Place Suggestion and so on.}
+  spec.description   = %q{Ruby wapper for Baidu Map API used for Place Suggestion and so on.}
   spec.homepage      = "https://github.com/yanyingwang/baidumap"
   spec.license       = "MIT"
 

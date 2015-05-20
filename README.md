@@ -10,7 +10,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'baidumap'
+gem 'baidu_map'
 ```
 
 And then execute:
