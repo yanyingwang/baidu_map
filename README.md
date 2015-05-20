@@ -19,7 +19,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install baidumap
+    $ gem install baidu_map
 
 
 
