@@ -74,13 +74,18 @@ Baidumap.location(ip: "115.172.82.212", coor: "bd09ll")
 
 
 
-### Result Debug
+### Result Debug: show original request url
 
-If the result's return status from Baidu API is not "0", then there is an error. To debug it, you always can attatch a block `{ |debug| debug.inspect }` to show the original url requested from this gem to Baidu just like this:
+If the return status of result from Baidu API is not "0", then there is an error. To debug it, you always can attatch a block `{ |debug| debug.inspect }` to show the original url requested from this gem to Baidu just like this:
 
-`Baidumap.place_detail(uids: [ "5508504d0319eecac6f0259a, 104274a315f7134fc3f1cfde" ], output: 'json', scope: '2') { |deug| debug.inspect } `
+```ruby
+`Baidumap.place_detail(uids: [ "5508504d0319eecac6f0259a, 104274a315f7134fc3f1cfde" ], output: 'json', scope: '2') { |deug| debug.inspect }
+```
 
-You can show your ak value used by this gem through this code `Baidumap.ak`.
+You can show your ak value used by this gem through this code:
+```ruby
+Baidumap.ak
+```
 
 
 
