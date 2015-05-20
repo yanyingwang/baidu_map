@@ -1,6 +1,6 @@
 
 # Baidumap
-[Baidu Map(百度地图) API in Ruby](http://developer.baidu.com/map/index.php?title=webapi/guide/webservice-placeapi)
+[Baidu Map(百度地图) API](http://developer.baidu.com/map/index.php?title=webapi/guide/webservice-placeapi) wrapper in Ruby
 
 
 
@@ -28,14 +28,14 @@ Or install it yourself as:
 
 ### Initialize
 
-```ruby
-# [ak申请](http://lbsyun.baidu.com/apiconsole/key?application=key)
+[ak申请](http://lbsyun.baidu.com/apiconsole/key?application=key)
 
+```ruby
 Baidumap.ak = "aaaaaaaaaaaaaaaaaa"
 
 # or
 
-Baidumap.setup {@ak "aaaaaaaaaaaaaaaaaa" }
+Baidumap.setup { @ak = "aaaaaaaaaaaaaaaaaa" }
 ```
 
 
@@ -45,11 +45,11 @@ Baidumap.setup {@ak "aaaaaaaaaaaaaaaaaa" }
 
 [API wiki](http://developer.baidu.com/map/index.php?title=webapi)
 
-Please note that params shouldn't include `output: 'json'` or `output: 'xml'`, which will be added by gem automatically and the result is always a hash.
+Please note that params shouldn't including `output: 'json'` or `output: 'xml'`, because which will be added by gem automatically and the result is always a hash.
 
 
 ```ruby
-# place API
+# Place API
 Baidumap.place_search(query: "九亭", region: "上海", scope: '1')
 
 Baidumap.place_detail(uid:  "5508504d0319eecac6f0259a", scope: '2')
@@ -76,7 +76,7 @@ Baidumap.location(ip: "115.172.82.212", coor: "bd09ll")
 
 ### Result Debug
 
-If the resturn status from Baidu API is not "0", then there is an error. To debug it, you always can attatch a block `{ |debug| debug.inspect }` to show the original url requested from this gem to Baidu just like this:
+If the result's return status from Baidu API is not "0", then there is an error. To debug it, you always can attatch a block `{ |debug| debug.inspect }` to show the original url requested from this gem to Baidu just like this:
 
 `Baidumap.place_detail(uids: [ "5508504d0319eecac6f0259a, 104274a315f7134fc3f1cfde" ], output: 'json', scope: '2') { |deug| debug.inspect } `
 
