@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-require "baidumap/version"
+require "baidu_map/version"
 require 'eat'
 require 'json'
 
 
-module Baidumap
+module BaiduMap
   class << self
     alias_method :setup, :instance_eval
     attr_accessor :ak

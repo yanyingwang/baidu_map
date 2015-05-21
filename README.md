@@ -1,5 +1,5 @@
 
-# Baidumap
+# BaiduMap
 [Baidu Map(百度地图) API](http://developer.baidu.com/map/index.php?title=webapi/guide/webservice-placeapi) wrapper in Ruby
 
 
@@ -31,11 +31,11 @@ Or install it yourself as:
 [ak申请](http://lbsyun.baidu.com/apiconsole/key?application=key)
 
 ```ruby
-Baidumap.ak = "aaaaaaaaaaaaaaaaaa"
+BaiduMap.ak = "aaaaaaaaaaaaaaaaaa"
 
 # or
 
-Baidumap.setup { @ak = "aaaaaaaaaaaaaaaaaa" }
+BaiduMap.setup { @ak = "aaaaaaaaaaaaaaaaaa" }
 ```
 
 
@@ -50,25 +50,25 @@ Please note that params shouldn't including `output: 'json'` or `output: 'xml'`,
 
 ```ruby
 # Place API
-Baidumap.place_search(query: "九亭", region: "上海", scope: '1')
+BaiduMap.place_search(query: "九亭", region: "上海", scope: '1')
 
-Baidumap.place_detail(uid:  "5508504d0319eecac6f0259a", scope: '2')
+BaiduMap.place_detail(uid:  "5508504d0319eecac6f0259a", scope: '2')
 
-Baidumap.place_detail(uids: "5508504d0319eecac6f0259a,8ee4560cf91d160e6cc02cd7", output: 'json', scope: '2')
+BaiduMap.place_detail(uids: "5508504d0319eecac6f0259a,8ee4560cf91d160e6cc02cd7", output: 'json', scope: '2')
 
 
 # Place Suggestion API
-Baidumap.place_suggestion(query: "九亭", region: "全国")
+BaiduMap.place_suggestion(query: "九亭", region: "全国")
 
 
 # Geocoding API
-Baidumap.geocoder(address: "九亭")
+BaiduMap.geocoder(address: "九亭")
 
-Baidumap.geocoder(location: '39.983424,116.322987')
+BaiduMap.geocoder(location: '39.983424,116.322987')
 
 
 # IP定位API
-Baidumap.location(ip: "115.172.82.212", coor: "bd09ll")
+BaiduMap.location(ip: "115.172.82.212", coor: "bd09ll")
 ```
 
 
@@ -79,12 +79,12 @@ Baidumap.location(ip: "115.172.82.212", coor: "bd09ll")
 If the return status of result from Baidu API is not "0", then there is an error. To debug it, you always can attatch a block `{ |debug| debug.inspect }` to show the original url requested from this gem to Baidu just like this:
 
 ```ruby
-`Baidumap.place_detail(uids: [ "5508504d0319eecac6f0259a, 104274a315f7134fc3f1cfde" ], output: 'json', scope: '2') { |deug| debug.inspect }
+`BaiduMap.place_detail(uids: [ "5508504d0319eecac6f0259a, 104274a315f7134fc3f1cfde" ], output: 'json', scope: '2') { |deug| debug.inspect }
 ```
 
 You can show your ak value used by this gem through this code:
 ```ruby
-Baidumap.ak
+BaiduMap.ak
 ```
 
 
@@ -103,7 +103,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/yanyingwang/baidumap/fork )
+1. Fork it ( https://github.com/yanyingwang/baidu_map/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
