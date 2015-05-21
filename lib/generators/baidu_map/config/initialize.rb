@@ -1,4 +1,4 @@
 
-BaiduMap.set do
+BaiduMap.setup do
   @ak = ''
 end
