@@ -39,6 +39,15 @@ BaiduMap.setup { @ak = "aaaaaaaaaaaaaaaaaa" }
 ```
 
 
+### Initialize for Rails
+
+run command:
+```shell
+$ rails generate baidu_map:install
+```
+and then add your ak to file `config/initializers/baidu_map.rb`.
+
+
 
 
 ### Example
