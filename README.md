@@ -63,7 +63,7 @@ BaiduMap.place_search(query: "九亭", region: "上海", scope: '1')
 
 BaiduMap.place_detail(uid:  "5508504d0319eecac6f0259a", scope: '2')
 
-BaiduMap.place_detail(uids: "5508504d0319eecac6f0259a,8ee4560cf91d160e6cc02cd7", output: 'json', scope: '2')
+BaiduMap.place_detail(uids: "5508504d0319eecac6f0259a,8ee4560cf91d160e6cc02cd7", scope: '2')
 
 
 # Place Suggestion API
@@ -88,7 +88,7 @@ BaiduMap.location(ip: "115.172.82.212", coor: "bd09ll")
 If the return status of result from Baidu API is not "0", then there is an error. To debug it, you always can attatch a block `{ |debug| debug.inspect }` to show the original url requested from this gem to Baidu just like this:
 
 ```ruby
-BaiduMap.place_detail(uids: "5508504d0319eecac6f0259a,8ee4560cf91d160e6cc02cd7", output: 'json', scope: '2') { |deug| debug.inspect }
+BaiduMap.place_detail(uids: "5508504d0319eecac6f0259a,8ee4560cf91d160e6cc02cd7", scope: '2') { |deug| debug.inspect }
 ```
 
 You can show your ak value used by this gem through this code:
