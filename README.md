@@ -54,8 +54,7 @@ Baidumap.place_search(query: "九亭", region: "上海", scope: '1')
 
 Baidumap.place_detail(uid:  "5508504d0319eecac6f0259a", scope: '2')
 
-Baidumap.place_detail(uids: "5508504d0319eecac6f0259a, 104274a315f7134fc3f1cfde", output: 'json', scope: '2')
-# NOTE and TODO: there is a bug that "," in uids's value will be translated, so this method is not usable currently.
+Baidumap.place_detail(uids: "5508504d0319eecac6f0259a,8ee4560cf91d160e6cc02cd7", output: 'json', scope: '2')
 
 
 # Place Suggestion API
@@ -65,8 +64,7 @@ Baidumap.place_suggestion(query: "九亭", region: "全国")
 # Geocoding API
 Baidumap.geocoder(address: "九亭")
 
-Baidumap.geocoder(location: '121.33428124857, 31.13491723367')
-# NOTE and TODO: there is a bug that "," in uids's value will be translated, so this method is not usable currently.
+Baidumap.geocoder(location: '39.983424,116.322987')
 
 
 # IP定位API
