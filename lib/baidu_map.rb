@@ -22,7 +22,7 @@ module BaiduMap
                    when 'location'                   # IP定位API
                      method_str + "/ip?"
                    when /^direction_.*/              # Route Martrix API
-                     method_str.sub('_', "/v1/") + '?'
+                     method_str.sub('_', "/v2/") + '?'
                    when 'geocoder'                   # Geocoding API
                      method_str + '/v2/?'
                    else                              #  /^place_.*/  --- Place API and Place Suggestion API
